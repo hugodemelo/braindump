@@ -1,4 +1,4 @@
-// 00 - What is a call signature
+// 00 - What is a call signature (just like any type but for a function)
 type MyUnion = 'a' | 'b' | 'c';
 
 // 01 - The different ways of declaring a call signature
@@ -15,7 +15,7 @@ const myFunc: Sum = (a, b) => {
   return a + b;
 };
 
-// 03 - Declare our own call signature
+// 03 - Declare our own call signature (for overloaded functions)
 type ArrayGenerator = {
   (type: 'a'): number[];
   (type: 'b'): string[];
@@ -47,7 +47,7 @@ type InferReturn<T> = T extends {
 type Return = InferReturn<ArrayGenerator>; // number[] | boolean[] | string[] | bigint[]
 
 (() => {
-  // The moment you set properties, it becomes an object NOT an overloaded function
+  // The moment you set properties, it becomes a type for an object NOT an overloaded function
   type Generator = {
     on(type: 'a'): number[],
     on(type: 'b'): boolean[],

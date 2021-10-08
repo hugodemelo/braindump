@@ -1,6 +1,6 @@
 (() => {
   type Person = {
-    [friends: string]: { name: string; age: number };
+    [ friends: string ]: { name: string; age: number };
   }
 
   // You can get the type of an index signature by using the indexed access type
