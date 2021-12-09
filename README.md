@@ -1,8 +1,10 @@
-## This repo holds ideas that pop-up once in while on my little brain in the hope that someday they will be explained on a youtube video or blog post.
+## Repository for cool & interesting snippets.
 
 ### Angular
 - view-child-services - you can use @ViewChildren/@ViewChild to access services injected on child components.
 
 ### TypeScript
+- getTypeFromIndexSignature.ts - get type of index signature.
 - infer.ts - use the 'infer' keyword to infer the return type of an overloaded function.
-- getTypeFromIndexSignature.ts - get type of index signature 
+- inlineUserDefinedTypeGuards.ts - use inline user defined type guards to carry type to another scope.
+- propertiesThatMatchAType.ts - get properties from a type that match provided types.
