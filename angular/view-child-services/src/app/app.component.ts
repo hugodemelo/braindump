@@ -1,7 +1,7 @@
 import { AfterViewInit, ChangeDetectorRef, Component, QueryList, ViewChildren } from '@angular/core';
 import { Generator } from './generator.service';
 import { from, of } from 'rxjs';
-import { concatMap, delay, take } from 'rxjs/operators';
+import { concatMap, delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +23,6 @@ export class AppComponent implements AfterViewInit {
     from(functions)
       .pipe(
         concatMap(func => of(func).pipe(delay(100))),
-        take(functions.length),
       ).subscribe(func => func());
     // this.cdr.detectChanges();
   }
